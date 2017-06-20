@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Clase 3 - MEAN</title>
+</head>
+<body>
+	<h1>{{title}}</h1>
+	<p>El autor del sitio es {{author}}</p>
+	<p>Un elemento del array: {{frutas[2]}}</p>
+
+	<h2>Mis frutas son:</h2>
+	<ul>
+	{% for fruta in frutas %}
+		<li>{{fruta}}</li>
+	{% endfor %}
+	</ul>
+
+	<p>{{mifuncion("Prueba")}}</p>
+
+</body>
+</html>
