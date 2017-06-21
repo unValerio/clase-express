@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="userApp">
+<head>
+	<meta charset="UTF-8">
+	<title>App den Angular</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-controller="mainCtrl">
+	
+	<div class="container">
+		<div class="row" style="margin-bottom:50px;">
+			<div class="col-md-12">
+				<h1>Mi aplicación de usuarios</h1>
+				<h2>Bienvenido {{nombre}}</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<ul>
+					<li>
+						<a href="#">Lista de usuarios</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4" ui-view>
+			</div>
+		</div>
+	</div>
+
+	<!-- Dependencias de terceros -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+	<!-- Dependencias internas -->
+	<script src="app.js"></script>
+	<script src="controllers/mainController.js"></script>
+	<script src="controllers/userListController.js"></script>
+
+</body>
+</html>
