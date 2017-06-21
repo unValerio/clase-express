@@ -8,3 +8,30 @@ exports.create = function(data, onSuccess, onError) {
 	else
 		userRepository.create(data, onSuccess, onError)
 }
+
+exports.getUsers = function(onSuccess, onError) {
+	
+	userRepository.findAll(onSuccess, onError)
+
+}
+
+exports.getUser = function(id, onSuccess, onError) {
+	
+	userRepository.find(id, onSuccess, onError)
+
+}
+
+exports.updateUser = function(id, data, onSuccess, onError) {
+	
+	if (data.age < 18)
+		return onError("El usuario debe ser mayor de edad")
+	else{
+		userRepository.find(id, function(user) {
+			
+			
+			
+		}, onError)
+	}
+}
+
+
