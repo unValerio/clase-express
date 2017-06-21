@@ -66,7 +66,7 @@ exports.updateUser = function(req, res) {
 		
 		res.json({
 			status: "success",
-			message: "Usuario actualizado"
+			message: "Usuario actualizado",
 			user:user
 		})
 
@@ -79,5 +79,27 @@ exports.updateUser = function(req, res) {
 	})
 
 }
+
+exports.deleteUser = function(req, res) {
+
+	var id = req.params.id
+	
+	userApp.deleteUser(id, function() {
+		
+		res.json({
+			status: "success",
+			message: "Usuario eliminado"
+		})
+
+	}, function(err) {
+		res.status(400)
+		res.json({
+			status: "failure",
+			message: err
+		})
+	})
+
+}
+
 
 

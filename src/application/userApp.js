@@ -27,11 +27,21 @@ exports.updateUser = function(id, data, onSuccess, onError) {
 		return onError("El usuario debe ser mayor de edad")
 	else{
 		userRepository.find(id, function(user) {
-			
-			
-			
+
+			userRepository.update(user, data, onSuccess, onError)
+
 		}, onError)
 	}
+}
+
+exports.deleteUser = function(id, onSuccess, onError) {
+	
+	userRepository.find(id, function(user) {
+
+		userRepository.delete(user, onSuccess, onError)
+		
+	}, onError)
+
 }
 
 

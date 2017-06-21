@@ -17,5 +17,8 @@ router.get("/users/:id", apiService.getUser)
 // Actualizar un usuario en específico
 router.put("/users/:id", apiService.updateUser)
 
+// Borrar un usuario en específico
+router.delete("/users/:id", apiService.deleteUser)
+
 // Exportar el módulo de rutas para API
 module.exports = router
