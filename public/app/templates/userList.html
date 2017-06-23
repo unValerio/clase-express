@@ -2,6 +2,12 @@
 <br><br>
 <ul ng-repeat="user in users">
 	<li>
-		{{user.name}} ({{user.age}} años de edad)
+		<button class="btn btn-danger" ng-click="delete(user._id)">Eliminar</button>
+		&nbsp;&nbsp;
+		<button class="btn btn-primary" ui-sref="userupdate({userId: user._id})">Editar</button>
+		&nbsp;&nbsp;
+		<a style="font-size: 20px;" ui-sref="userpage({userId: user._id})">
+			{{user.name}}
+		</a>
 	</li>
 </ul>

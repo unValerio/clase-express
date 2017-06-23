@@ -19,11 +19,14 @@
 			<div class="col-md-4">
 				<ul>
 					<li>
-						<a href="#">Lista de usuarios</a>
+						<a ui-sref="userList">Lista de usuarios</a>
+					</li>
+					<li>
+						<a ui-sref="userCreate">Crear usuario</a>
 					</li>
 				</ul>
 			</div>
-			<div class="col-md-4" ui-view>
+			<div class="col-md-8" ui-view>
 			</div>
 		</div>
 	</div>
@@ -36,6 +39,9 @@
 	<script src="app.js"></script>
 	<script src="controllers/mainController.js"></script>
 	<script src="controllers/userListController.js"></script>
+	<script src="controllers/userCreateController.js"></script>
+	<script src="controllers/userController.js"></script>
+	<script src="controllers/userUpdateController.js"></script>
 
 </body>
 </html>
